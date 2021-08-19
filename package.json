@@ -1,0 +1,14 @@
+{
+  "name": "ecoleta",
+  "version": "0.1.0",
+  "private": true,
+  "repository": "https://github.com/oigabrielteodoro/ecoleta.git",
+  "author": "Gabriel Teodoro",
+  "license": "MIT",
+  "workspaces": {
+    "packages": ["packages/*"]
+  },
+  "scripts": {
+    "client:start": "yarn workspace @ecoleta/client dev"
+  }
+}

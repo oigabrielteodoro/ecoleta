@@ -1,0 +1,11 @@
+{
+  "name": "@client/api",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "dev": "nodemon --exec sucrase-node src/index.ts",
+    "build": "tsc"
+  }
+}
