@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "jest --maxWorkers=50%"
+    "test": "jest --maxWorkers=50%",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "react": "^17.0.0",
