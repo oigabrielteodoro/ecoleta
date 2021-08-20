@@ -12,10 +12,18 @@
   },
   "scripts": {
     "api:dev": "yarn workspace @ecoleta/api dev",
+    "api:typecheck": "yarn workspace @ecoleta/api typecheck",
+    "api:lint": "yarn workspace @ecoleta/api lint",
+    "api:lint:fix": "yarn workspace @ecoleta/api lint:fix",
     "client:dev": "yarn workspace @ecoleta/client dev",
     "client:test": "yarn workspace @ecoleta/client test",
+    "client:typecheck": "yarn workspace @ecoleta/client typecheck",
+    "client:lint": "yarn workspace @ecoleta/client lint",
+    "client:lint:fix": "yarn workspace @ecoleta/client lint:fix",
     "prepare": "husky install",
-    "typecheck": "yarn workspace @ecoleta/client typecheck && yarn workspace @ecoleta/api typecheck"
+    "typecheck": "yarn api:typecheck && yarn client:typecheck",
+    "lint": "yarn api:lint && yarn client:lint",
+    "lint:fix": "yarn api:lint:fix && yarn client:lint:fix"
   },
   "devDependencies": {
     "@types/node": "16.6.2",

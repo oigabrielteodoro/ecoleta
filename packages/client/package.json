@@ -6,7 +6,9 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "jest --maxWorkers=50%",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "lint": "eslint . --ext js,ts,jsx,tsx",
+    "lint:fix": "eslint --fix . --ext js,ts,jsx,tsx"
   },
   "dependencies": {
     "react": "^17.0.0",
