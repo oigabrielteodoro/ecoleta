@@ -1,12 +1,12 @@
 import * as t from 'io-ts'
 
-import { emailCodec } from '@/core/types'
+import { emailCodec, urlCodec } from '@/core/types'
 
 export const pointCodec = t.type({
   name: t.string,
   email: emailCodec,
   cellphone: t.string,
-  image_url: t.string,
+  image_url: urlCodec,
   address: t.type({
     city: t.string,
     region: t.string,
