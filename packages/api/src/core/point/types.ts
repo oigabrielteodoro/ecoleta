@@ -19,3 +19,7 @@ export const pointCodec = t.type({
 })
 
 export type Point = t.TypeOf<typeof pointCodec>
+
+export const createPointCodec = t.identity(pointCodec)
+
+export type CreatePoint = t.TypeOf<typeof createPointCodec>
