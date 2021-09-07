@@ -6,7 +6,7 @@ import { CreatePoint } from '../types'
 
 import { validatePoint } from './validate-point'
 
-type OutsideRegisterPoint<A> = (data: CreatePoint) => Promise<A>
+export type OutsideRegisterPoint<A> = (data: CreatePoint) => Promise<A>
 
 type RegisterPoint = <A>(
   outsideRegister: OutsideRegisterPoint<A>,

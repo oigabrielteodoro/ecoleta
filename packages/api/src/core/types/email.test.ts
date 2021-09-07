@@ -23,6 +23,6 @@ it('should not accept an invalid email', async () => {
     states.invalid,
     emailCodec.decode,
     fromEither,
-    mapAll((errors) => expect(getErrorMessage(errors)).toBe('Invalid email.')),
+    mapAll((errors) => expect(getErrorMessage(errors)).toBe('Invalid email')),
   )()
 })

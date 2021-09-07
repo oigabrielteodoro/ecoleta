@@ -5,7 +5,7 @@ import { emailCodec, urlCodec } from '@/core/types'
 export const pointCodec = t.type({
   name: t.string,
   email: emailCodec,
-  cellphone: t.string,
+  phone: t.string,
   image_url: urlCodec,
   address: t.type({
     city: t.string,
