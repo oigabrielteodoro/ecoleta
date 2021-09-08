@@ -1,23 +1,25 @@
 import { Request, Response } from 'express'
 
-import { Point } from '@/types'
-
-const points: Point[] = [
-  {
-    name: 'Mercado do seu Zé',
-    email: 'mercado@mail.com',
-    image_url: 'https://github.com/brainnco.png',
-    address: {
-      city: 'São Paulo',
-      coordinates: [1, 1],
-      state: 'SP',
-    },
-  },
-]
+import PointsRepository from '../repositories/PointsRepository'
 
 class PointController {
   async index(_: Request, response: Response) {
-    return response.json(points)
+    const points = await PointsRepository.findAll()
+    response.json(points)
+  }
+
+  async store(request: Request, response: Response) {
+    const { name, email, phone, image_url, place_id } = request.body
+
+    const point = await PointsRepository.create({
+      name,
+      email,
+      phone,
+      image_url,
+      place_id,
+    })
+
+    response.json(point)
   }
 }
 

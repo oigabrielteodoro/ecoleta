@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS points (
   name VARCHAR NOT NULL,
   email VARCHAR NOT NULL UNIQUE,
   phone VARCHAR NOT NULL,
+  image_url VARCHAR,
   place_id UUID,
   FOREIGN KEY(place_id) REFERENCES places(id)
 );
