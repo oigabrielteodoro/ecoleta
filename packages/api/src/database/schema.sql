@@ -1,4 +1,4 @@
-CREATE DATABASE ecoleta;
+CREATE DATABASE "api-ecoleta";
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
@@ -17,7 +17,8 @@ CREATE TABLE IF NOT EXISTS points (
   phone VARCHAR NOT NULL,
   image_url VARCHAR,
   place_id UUID,
-  FOREIGN KEY(place_id) REFERENCES places(id)
+  CONSTRAINT AddPlaceIdFromPlaces FOREIGN KEY(place_id) REFERENCES places(id)
+  ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS categories (
